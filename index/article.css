@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #6697a5, #d3eef9);
+}
+body header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: white;
+}
+
+body header .logo {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+}
+
+body header nav .navigation {
+    display: flex;
+    gap:20px;
+    font-size: 1.1rem;
+}
+
+body header nav .navigation li {
+    list-style: none;
+}
+
+body header nav .navigation li a {
+    text-decoration: none;
+    color: black
+}
+
+.indexBox {
+    width: 92%;
+    height: 100%;
+    background: #fff;
+    margin-top: 40px;
+    border-radius: 30px;
+    display: flex;
+}
+
+/* Main Box */
+
+.indexBox .mainContentBox {
+    width: 70%;
+    padding: 30px;
+}
+
+.indexBox .mainContentBox .mainContent .contentTitle {
+    font-size: 3rem;
+}
+
+.indexBox .mainContentBox .mainContent .titleImg {
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    margin: 50px 0px;
+    
+}
+
+.indexBox .mainContentBox .mainContent .contentText {
+    line-height: 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.indexBox .mainContentBox .mainContent .contentText a {
+    text-decoration: none;
+    color: #33707d;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.indexBox .mainContentBox .mainContent .contentText a:hover {
+    color: #6697a5;
+}
+/* Secondary Box */
+
+
+.indexBox .secondaryContentBox {
+    width: 30%;
+    padding: 30px;
+}
+
+.indexBox .secondaryContentBox .newPostBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.indexBox .secondaryContentBox .newPostBox h4 {
+    padding: 10px 0px;
+}
+
+.indexBox .secondaryContentBox .newPostBox .newPost h5{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+.indexBox .secondaryContentBox .newPostBox .newPost img {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    padding: 10px;
+}
+.indexBox .secondaryContentBox .newPostBox .newPost {
+    font-size: 0.7rem;
+
+}
