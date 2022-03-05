@@ -1,74 +1,83 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
 body {
     width: 100%;
-    background: linear-gradient(to right, #8fb881, #d6d9c5);
+    height: 100vh;
+    background: linear-gradient(135deg, #8e8ccd, #54506d);
 }
 
 section {
+    margin: 40px;
+    padding: 40px;
     position: relative;
     display: flex;
-    width: 100%;
-    height: 100vh;
+    background: #fff;
+    border-radius: 20px;
 }
 
 section .productBox {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 50%;
+    width: 60%;
     height: 100%;
-   
+    padding-right: 45px;
+}
+section .productBox h2 {
+    margin-bottom: 45px;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
-section .productBox .imgBox {
-    padding: 20px;
+section .productBox .line {
     width: 100%;
-    height: 60vh;
-    
+    height: 1.5px;
+    background: gray;
+    margin-bottom: 20px;
+}
+section .productBox .product {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
 }
 
-section .productBox .imgBox img {
+section .productBox .product img {
+    width: 9%;
+    border-radius: 20px;
     object-fit: contain;
+}
+
+section .productBox .product .num {
+    display: flex;
+    gap: 30px;
+}
+
+section .productBox .dollor {
     width: 100%;
-    height: 100%;
-}
-
-section .productBox .content {
-    padding: 30px 80px;
-}
-
-section .productBox .content h2 {
-    color: #4f5d50;
-}
-
-section .productBox .content h2 span {
-    font-size: 0.9rem;
-    font-weight: lighter;
-    margin-left: 8rem;
-}
-
-section .productBox .content p {
-   
-    margin-top: 20px;
-    line-height: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
 }
 
 section .creditCardBox {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #c3c3e2;
+    border-radius: 20px;
 }
 
 section .creditCardBox form {
-    width: 60%;
+    width: 75%;
 }
 
 section .creditCardBox .inputBox {
@@ -78,8 +87,9 @@ section .creditCardBox .inputBox {
 section .creditCardBox .inputBox span {
     display: block;
     font-size: 0.75rem;
-    color: #545871;
+    color: #fff;
     margin-bottom: 2px;
+    white-space: nowrap;
 }
 
 section .creditCardBox .inputBox input,
@@ -89,19 +99,19 @@ section .creditCardBox .inputBox select {
     padding: 5px 20px;
     border-radius: 40px;
     border: 1px solid #545871;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     transition: 0.3s;
 }
 
 section .creditCardBox .inputBox input:focus,
 section .creditCardBox .inputBox select:focus {
-    background: #d6d9c5;
+    background: #b8b7e4;
 }
 
 
 section .creditCardBox .flexbox {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 section .creditCardBox .flexbox .inputBox {
@@ -116,39 +126,12 @@ section .creditCardBox .checkoutBox {
     width: 100%;
 }
 
-section .creditCardBox .checkoutBox .detail {
-    width: 60%;
-    
-}
-
-section .creditCardBox .checkoutBox .detail .product {
-    display:flex;
-    justify-content: space-between;
-    line-height: 1.5rem;
-    color: #545871;
-    font-weight: lighter;
-    letter-spacing: 0.8px;
-}
-
-section .creditCardBox .checkoutBox .detail p {
-    font-size: 0.8rem;
-    position: relative;
-    left: 0;
-}
-
-section .creditCardBox .checkoutBox .detail h3 {
-    margin-top: 5px;
-    color: #4f5d50;
-    font-weight: bold;
-    text-align: end;
-}
-
-section .creditCardBox .checkoutBox .submitBtn {
+section .creditCardBox .submitBtn {
     margin-top: 10px;
     width: 30%;
     outline: none;
-    border: none;
-    background: #a9b6a4;
+    border: 1px solid gray;
+    background: #fff;
     padding: 10px;
     border-radius: 40px;
     cursor: pointer;
@@ -156,21 +139,21 @@ section .creditCardBox .checkoutBox .submitBtn {
     letter-spacing: 0.8px
 }
 
-section .creditCardBox .checkoutBox .submitBtn:hover {
-    background: #4f5d50;
+section .creditCardBox .submitBtn:hover {
+    background: #b8b7e4;
     color: white;
 }
 
 section .creditCardBox .cardBox {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     position: relative;
-    width: 350px;
+    width: 330px;
     height: 220px;
     text-transform: uppercase;
 }
 
 section .creditCardBox .cardBox .front {
-    background: #a9b6a4;
+    background: #8e8ccd;
     padding: 30px 25px 20px 25px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -210,7 +193,7 @@ section .creditCardBox .cardBox .back {
     top: 0;
     height: 100%;
     width: 100%;
-    background: #a9b6a4;
+    background: #8e8ccd;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
     border-radius: 10px;
     padding: 25px 0;
@@ -250,4 +233,44 @@ section .creditCardBox .cardBox .back .box .cvvBox {
 section .creditCardBox .cardBox .back .box img {
     height: 30px;
     margin-top: 25px;
+}
+
+@media(max-width:1100px) {
+    section {
+        flex-direction: column;
+    }
+
+    section .productBox {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    section .creditCardBox {
+        width: 100%;
+        padding: 20px 0px;
+        margin-top: 100px;
+    }
+    
+}
+
+@media(max-width:500px) {
+    * {
+        font-size: 0.9rem;
+    }
+
+    section {
+        margin: 15px;
+        padding: 10px;
+    }
+
+    section .creditCardBox .inputBox input,
+    section .creditCardBox .inputBox select {
+        padding: 5px 5px;
+    }
+
+    section .creditCardBox .cardBox {
+        width: 280px;
+        height: 180px;
+        margin-bottom: 50px;
+    }
 }

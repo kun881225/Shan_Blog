@@ -7,11 +7,11 @@
 
 body {
     width: 100%;
-    height: 200vh;
+    min-height: 200vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #6697a5, #d3eef9);
+    background: linear-gradient(to right, #6697a5, #d3eef9);
 }
 
 body header {
@@ -49,9 +49,10 @@ body header nav .navigation li a {
 
 .indexBox {
     width: 92%;
-    height: 100%;
+    min-height: 100%;
+    height: max-content;
     background: #fff;
-    margin-top: 40px;
+    margin: 40px 0px;
     border-radius: 30px;
     display: flex;
 }
@@ -61,33 +62,36 @@ body header nav .navigation li a {
     padding: 30px;
 }
 
-.indexBox .mainContentBox .mainContent {
+.indexBox .mainContentBox .mainContent a{
     display: flex;
     gap: 30px;
     border-bottom: 1px solid rgb(216, 216, 216);
     padding-bottom: 30px;
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
 }
 
-.indexBox .mainContentBox .mainContent img {
-    width: 40%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 20px;
-}
-
-.indexBox .mainContentBox .mainContent .contentTitle a{
-    font-size: 1.8rem;
+.indexBox .mainContentBox .mainContent a .contentTitle {
+    font-size: 1.7rem;
     font-weight: bolder;
     text-decoration: none;
     color: black;
     transition: 0.3s;
 }
 
-.indexBox .mainContentBox .mainContent .contentTitle a:hover {
-    color: #6697a5;
+.indexBox .mainContentBox .mainContent a:hover .contentTitle {
+    color: #33707d;
 }
 
-.indexBox .mainContentBox .mainContent .contentText {
+.indexBox .mainContentBox .mainContent a img {
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.indexBox .mainContentBox .mainContent a .contentText {
     font-size: 1rem;
     text-overflow: ellipsis;
     width: 100%;
@@ -100,7 +104,7 @@ body header nav .navigation li a {
     padding-top: 15px;
 }
 
-.indexBox .mainContentBox .mainContent .date {
+.indexBox .mainContentBox .mainContent a .date {
     color: #777;
     letter-spacing: 1px;
     margin-top: 20px;
@@ -116,14 +120,17 @@ body header nav .navigation li a {
     flex-direction: column;
 }
 
+.indexBox .secondaryContentBox .newPostBox a {
+    text-decoration: none;
+    color: black;
+}
+
 .indexBox .secondaryContentBox .newPostBox h4 {
     padding: 10px 0px;
     color: #33707d
 }
 
-.indexBox .secondaryContentBox .newPostBox .newPost h5 a{
-    text-decoration: none;
-    color: black;
+.indexBox .secondaryContentBox .newPostBox .newPost h5 {
     font-size: 1rem;
 }
 .indexBox .secondaryContentBox .newPostBox .newPost img {
@@ -136,4 +143,27 @@ body header nav .navigation li a {
 .indexBox .secondaryContentBox .newPostBox .newPost {
     font-size: 0.7rem;
 
+}
+
+
+@media(max-width:1000px) {
+    .indexBox {
+        flex-direction: column;
+    }
+
+    .indexBox .mainContentBox {
+        width: 100%;
+    }
+
+    .indexBox .mainContentBox .mainContent a {
+        flex-direction: column;
+    }
+
+    .indexBox .mainContentBox .mainContent a img {
+        width: 100%;
+    }
+    
+    .indexBox .secondaryContentBox {
+        width: 100%;
+    }
 }
