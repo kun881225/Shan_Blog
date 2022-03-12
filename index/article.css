@@ -30,6 +30,10 @@ body header .logo {
     color: black;
 }
 
+body header .logo span {
+    color: #33707d;
+}
+
 body header nav .navigation {
     display: flex;
     gap:20px;
@@ -60,11 +64,14 @@ body header nav .navigation li a {
 .indexBox .mainContentBox {
     width: 70%;
     padding: 30px;
+    
 }
 
 .indexBox .mainContentBox .mainContent .contentTitle {
     font-size: 3rem;
 }
+
+
 
 .indexBox .mainContentBox .mainContent .titleImg {
     width: 80%;
@@ -78,6 +85,22 @@ body header nav .navigation li a {
     line-height: 2.5rem;
     font-size: 1rem;
     font-weight: 500;
+    letter-spacing: 1.2px;
+}
+
+.indexBox .mainContentBox .mainContent .contentText .code {
+    background: #e2e2e2;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+
+.indexBox .mainContentBox .mainContent .contentText code {
+    display: block;
+    background: #e2e2e2;
+    white-space: pre-line;
+    padding:  30px;
+    line-height: 2rem;
+    border-radius: 20px;
 }
 
 .indexBox .mainContentBox .mainContent .contentText a {
@@ -100,6 +123,7 @@ body header nav .navigation li a {
 .indexBox .secondaryContentBox .newPostBox {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .indexBox .secondaryContentBox .newPostBox h4 {
@@ -136,6 +160,7 @@ body header nav .navigation li a {
 
     .indexBox .mainContentBox {
         width: 100%;
+        border-bottom: 1px solid rgb(216, 216, 216);
     }
 
     .indexBox .mainContentBox .mainContent a {
@@ -147,6 +172,20 @@ body header nav .navigation li a {
     }
     
     .indexBox .secondaryContentBox {
+        width: 100%;
+    }
+}
+
+@media(max-width:450px) {
+    * {
+        font-size: 0.95rem;
+    }
+
+    .indexBox .mainContentBox .mainContent .contentTitle {
+        font-size: 1.8rem;
+    }
+    
+    .indexBox .mainContentBox .mainContent .titleImg {
         width: 100%;
     }
 }
