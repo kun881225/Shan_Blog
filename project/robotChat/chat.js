@@ -11,11 +11,10 @@ let i = 0;
 function answer() {
     if (i < answerArr.length) {
         $('.chat').append(
-            "<div class='contentBox1'><img src='5.jpg' class='shot'><div class='arrow'></div><p class='text'>"+ answerArr[i] + "</p></div>"
+            "<div class='contentBox1'><img src='5.jpg' class='shot'><div class='arrow'></div><p class='text'>" + answerArr[i] + "</p></div>"
         );
         i++
     }
-    chatClass.scrollIntoView(false);
     
 }
 
@@ -42,8 +41,6 @@ $(document).ready(function() {
             send();
         }
     })
-    
-   
 })
 
 

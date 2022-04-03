@@ -59,6 +59,7 @@ body header nav .navigation li a {
     margin: 40px 0px;
     border-radius: 30px;
     display: flex;
+    
 }
 
 .indexBox .mainContentBox {
@@ -79,7 +80,7 @@ body header nav .navigation li a {
 }
 
 .indexBox .mainContentBox .mainContent a .contentTitle {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: bolder;
     text-decoration: none;
     color: black;
@@ -98,7 +99,7 @@ body header nav .navigation li a {
 }
 
 .indexBox .mainContentBox .mainContent a .contentText {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     text-overflow: ellipsis;
     width: 100%;
     overflow: hidden;
@@ -140,7 +141,7 @@ body header nav .navigation li a {
 }
 
 .indexBox .secondaryContentBox .newPostBox .newPost h5 {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 .indexBox .secondaryContentBox .newPostBox .newPost img {
     width: 90%;

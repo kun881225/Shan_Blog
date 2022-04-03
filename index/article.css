@@ -98,7 +98,7 @@ body header nav .navigation li a {
     display: block;
     background: #e2e2e2;
     white-space: pre-line;
-    padding:  30px;
+    padding:  0px 30px 30px 30px;
     line-height: 2rem;
     border-radius: 20px;
 }
@@ -126,7 +126,8 @@ body header nav .navigation li a {
     gap: 20px;
 }
 
-.indexBox .secondaryContentBox .newPostBox h4 {
+.indexBox .secondaryContentBox  h4 {
+    font-size: 1.2rem;
     padding: 10px 0px;
     color: #33707d;
 }
