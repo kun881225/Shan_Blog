@@ -1,0 +1,59 @@
+.mainContentBox {
+    width: 100%;
+    min-height: 80vh;
+}
+
+.mainContent {
+    position: relative;
+    padding: 50px;
+}
+
+.shot {
+    position: absolute;
+    right: -300px;
+    top: 40px;
+    width: 250px;
+    border-radius: 20px;
+    transform: scaleX(-1);
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+}
+
+ion-icon {
+    position: relative;
+    transform: translateY(2px);
+    padding-right: 5px;
+}
+
+.profile, .summary, .skill{
+    line-height: 2.3rem;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.profile h2, .summary h2, .skill h2 {
+    margin-bottom: 10px;
+}
+
+.profile p, .summary p, .skill p{
+    padding-left: 25px;
+}
+
+a {
+    padding-left: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+#a1 {
+    padding-left: 0px;
+}
+
+.summary {
+    border: none;
+}
