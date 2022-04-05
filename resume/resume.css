@@ -57,3 +57,21 @@ a {
 .summary {
     border: none;
 }
+
+@media (max-width:600px) {
+    .shot {
+        width: 150px;
+        right: 0;
+        top: 0px;
+        position: relative;
+    }
+    .profile p, .summary p, .skill p{
+        padding-left: 0px;
+    }
+    .indexBox .mainContentBox {
+        padding: 5px;
+    }
+    a {
+        padding-left: 0px;
+    }
+}
