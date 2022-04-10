@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杉.blog | plotly.js</title>
+
+    <!--  google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+
+    <!--  css  -->
+    <link rel="stylesheet" href="../../index/article.css">
+    <style>
+
+        @media (max-width: 600px) {
+            #plotly1_1 {
+            position: relative;
+            transform: translateX(-20px);
+        }
+            #plotly1_2 {
+                position: relative;
+                transform: translateX(-20px);
+            }
+            #plotly1_3 {
+                position: relative;
+                transform: translateX(-20px);
+            }
+        }
+       
+    </style>
+
+
+    <!-- script -->
+    <script src="../../plotly-2.11.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo"><h2>衫<span>.</span>Blog</h2></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">JS</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">Daily UI</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="indexBox">
+        <article class="mainContentBox">
+            <div class="mainContent">
+                <p class="date">2022.4.10</p>
+                <h3 class="contentTitle">畫圖表? plotly.js!</h3>    <!--  標 題  -->
+                <div id="plotly1_1"></div>
+                <p class="contentText">
+
+                    前陣子在統計資料的時候需要各種圖表，我就在想有沒有可以快速畫出圖表的東西(除了excel，我不太會用)，結果就被我發現這個!
+                    <span class="important">plotly.js!</span>
+                    <br>
+                    <br>
+                    plotly.js是一個免費的JS函式庫，用法也超簡單，首先我們要先引入函式庫，你可以:
+                    <br>
+                    1:直接用 CDN link 引入
+                    <br>
+                    <span class="code">
+                        <span><</span>script src="https://cdn.plot.ly/plotly-2.11.1.min.js"><span><</span>/script>
+                    </span>
+                    <br>
+                    2:或去<a href="https://plotly.com/javascript/getting-started/">官網</a>下載<a href="https://cdn.plot.ly/plotly-2.11.1.min.js">js檔</a>直接引入
+                    <br>
+                    <span class="code">
+                        <span><</span>script src="plotly-2.11.1.min.js"><span><</span>/script>
+                    </span>
+                    <br>
+                    然後就可以正式開始了!
+                    <br>
+                    <br>
+                    要統計資料的話，那我們肯定要先有一筆資料對吧，於是我找來了從107~111年的重要民生物資物價指標，就是看物價漲了多少(好可怕)
+                    <br>
+                    先在.js裡打上資料，並且我想以折線圖來做，折線圖在plotly.js裡叫做scatter，於是我們可以寫成這樣
+                    <code>
+                        let price = {
+                            &nbsp&nbsp x: [107, 108, 109, 110, 111],
+                            &nbsp&nbsp y: [103.4, 106.2, 104.9, 107.2, 110.1],
+                            &nbsp&nbsp type: 'scatter',
+                        };
+                    </code>
+                    (注意，每行code都要用逗號隔開喔)
+                    <br>
+                    然後要用陣列的方式把資料儲存下來，所以我們這樣打
+                    <code>
+                        let data = [price]; 
+                    </code>
+                    最後再用這個plotly.js規定的函式
+                    <code>
+                        Plotly.newPlot('myDiv', data);  &nbsp&nbsp&nbsp&nbsp   // <span><</span>div id="myDiv"><span><</span>/div>
+                    </code>
+
+                    <br>
+                    登愣!最基礎的折線圖非常簡單就可以做出來了! 所以plotly.js真的是很強大的函式庫，完全沒有用到什麼很難的東西，我只知道物價一直漲。
+                    <div id="plotly1_2"></div>
+                </p>
+                <p class="contentText">
+                    <br>
+                    當然，這樣感覺還少了些東西，標題阿，x軸和y軸的名字啊之類的，所以我們可以再這樣
+                    <br>
+                    <code>
+                        let layout = {
+                            &nbsp&nbsp    title: '107~110物價指標', 
+                            &nbsp&nbsp    titlefont: 28, 
+                            &nbsp&nbsp   xaxis: { 
+                            &nbsp&nbsp&nbsp&nbsp        title: '年(民國)',
+                            &nbsp&nbsp   },
+                            &nbsp&nbsp   yaxis: {  
+                            &nbsp&nbsp&nbsp&nbsp       title: '指標(以105 = 100 為基準)',
+                            &nbsp&nbsp  },
+                        }
+                    </code>
+                    最後我們再加上一個可以讓表格跟著螢幕改變大小的設定
+                    <code>
+                        let config = {
+                            &nbsp&nbsp    responsive: true,
+                        }
+
+                        Plotly.newPlot('myDiv', data, layout, config);
+                    </code>
+                    沒錯!這樣就完成一個圖表了!
+                    
+                </p>
+                <div id="plotly1_3"></div>
+                
+
+
+            </div>
+        </article>
+
+        
+        <!--  aisde  -->
+        <!--  aisde  -->
+
+        <aside class="secondaryContentBox">
+            <h4>最新文章</h4>
+            <div class="newPostBox">
+                
+                <div class="newPost">
+                    <a href="../../project/robotChat/chatIndex.html">
+                        <h5>偽聊天機器人</h5>
+                        <img src="../../index/img/chatRobot.jpg">
+                        <p class="date">2022.3.19</p>
+                    </a>
+                </div> 
+                <div class="newPost">
+                    <a href="../Day3 Landing page/Day3Index.html">
+                        <h5>Daily UI Day 3 - Landing Page 以及 visibility</h5>
+                        <img src="../../index/img/DailyUIDay3.png">
+                        <p class="date">2022.3.12</p>
+                    </a>
+                </div> 
+
+     
+            </div>
+        </aside>
+    </div>
+    
+
+    <!--  script  -->
+    <!--  script  -->
+
+    <script src="../../jquery-3.6.0.min.js"></script>
+    <script src="../project.js"></script>
+    <script src="plotly.js"></script>
+</body>
+</html>
