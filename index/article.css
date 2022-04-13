@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
+    color: #2c2c34;
 }
 
 body {
@@ -21,14 +22,14 @@ body header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-    background: white;
+    background: #fafafa;
     z-index: 10;
 }
 
 body header .logo {
     font-size: 1.4rem;
     text-decoration: none;
-    color: black;
+    color: #2c2c34;
 }
 
 body header .logo span {
@@ -47,14 +48,14 @@ body header nav .navigation li {
 
 body header nav .navigation li a {
     text-decoration: none;
-    color: black
+    color: #2c2c34;
 }
 
 .indexBox {
     width: 92%;
     min-height: 100%;
     height: max-content;
-    background: #fff;
+    background: #fafafa;
     margin: 40px 0px;
     border-radius: 30px;
     display: flex;
@@ -143,12 +144,12 @@ body header nav .navigation li a {
 
 .indexBox .secondaryContentBox .newPostBox .newPost a {
     text-decoration: none;
-    color:black;
+    color: #2c2c34;
 }
 
 .indexBox .secondaryContentBox .newPostBox .newPost h5{
     text-decoration: none;
-    color: black;
+    color: #2c2c34;
     font-size: 1rem;
 }
 .indexBox .secondaryContentBox .newPostBox .newPost img {
