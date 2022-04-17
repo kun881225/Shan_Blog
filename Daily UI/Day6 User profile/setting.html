@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+
+    <link rel="stylesheet" href="userProfile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#"><ion-icon name="compass-outline"></ion-icon>New</a>
+                </li>
+                <li>
+                    <a href="#"><ion-icon name="flame-outline"></ion-icon>Hot</a>
+                </li>
+                <li>
+                    <a href="#"><ion-icon name="bookmark-outline"></ion-icon>Favorite</a>
+                </li>
+                <li>
+                    <a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a>
+                </li>
+                <li>
+                    <a href="#"><ion-icon name="chatbubble-outline"></ion-icon>Message</a>
+                </li>
+                <li>
+                    <a href="#" class="user" ><ion-icon name="person-outline"></ion-icon>Profile</a>
+                </li>
+                <li>
+                    <a href="#" class="setting"><ion-icon name="settings-outline"></ion-icon>Setting</a>
+                </li>
+            </ul>
+        </nav>       
+
+        <div class="profileBox" >
+            
+            <div id="profileBox2">
+                <div class="menuBar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="set1">
+                    <h2>Information</h2>
+                    <div>
+                        <p>First name :</p>
+                        <input type="text"></input>
+                    </div>
+                    <div>
+                         <p>Last name :</p>
+                         <input type="text"></input>
+                      </div>
+                     <div>
+                         <p>Age :</p>
+                         <input type="text"></input>
+                     </div>
+                     <div>
+                         <p>Birth :</p>
+                         <input type="text"></input>
+                     </div>
+                </div>
+                <div class="set2">
+                    <h2>Notification</h2>
+                    <div>
+                        <p>Like</p>
+                        <input type="checkbox" checked></input>
+                    </div>
+                    <div>
+                         <p>Message</p>
+                         <input type="checkbox" checked></input>
+                    </div>
+                    <div>
+                        <p>Response</p>
+                        <input type="checkbox" checked></input>
+                    </div>
+                     <div>
+                         <p>Post</p>
+                         <input type="checkbox" checked></input>
+                     </div>
+                     
+                </div>
+               <input type="submit" value="submit" id="submit"></input>
+            </div>
+            
+        </div>
+         
+            
+        </div>
+    </section>
+
+
+
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="../../jquery-3.6.0.min.js"></script>
+
+    <script src="userProfile.js"></script>
+
+</body>
+</html>

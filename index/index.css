@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans TC', Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
     color: #2c2c34;
 }
 
@@ -72,7 +72,7 @@ body header nav .navigation li a:hover {
     width: 72%;
     padding: 30px;
     margin-right: 20px;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.5px;
 }
 
 .indexBox .mainContentBox .mainContent a{

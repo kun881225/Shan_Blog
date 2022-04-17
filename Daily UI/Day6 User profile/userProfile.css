@@ -2,11 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
 }
 
 body {
-    height: max-content;
+    height: 100vh;
     display: flex;
     place-content: center;
     width: 100%;
@@ -16,16 +16,23 @@ body {
 
 section {
     width: 80%;
+    height: max-content;
     display: flex;
+    justify-content: space-around;
     margin: 50px;
-    border-radius: 20px;
     overflow: hidden;
-    background: white;
+    background: transparent;
+    
 }
 
 .menu {
-    width: 25%;
-    padding: 10px 0 0 0
+    width: 23%;
+    height: min-content;
+    margin-right: 40px;
+    padding: 10px 0 0 0;
+    background: #fafafa;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 .menu ul li {
@@ -37,11 +44,11 @@ section {
     display: flex;
     align-items: center;
     text-decoration: none;
-    gap: 15px;
-    font-size: 1.2rem;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    font-size: 1.1rem;
     padding: 15px 10px;
     transition: .3s;
+    transform: translateY(-5px);
+    gap:10px;
 }
 
 .menu ul li a:hover {
@@ -53,9 +60,11 @@ section {
 }
 
 .profileBox {
-    width: 75%;
-    border-left: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
     position: relative;
+    background: #f8f8f8f8;
+    border-radius: 20px;
+    padding-bottom: 15px;
 }
 
 .profileBox .backgroundImgBox {
@@ -63,7 +72,9 @@ section {
     height: 25vh;
     object-fit: cover;
     background: #333;
-
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transform: translateX(-1px);
 }
 
 .profileBox .backgroundImgBox img {
@@ -71,6 +82,7 @@ section {
     height: 100%;
     object-fit: cover;
     opacity: 0.5;
+    border-radius: 20px;
 }
 
 .profileBox .shotBox {
@@ -85,6 +97,7 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    white-space: nowrap;
 }
 
 .profileBox .shotBox img {
@@ -92,7 +105,7 @@ section {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 3.5px solid #fafafa;
 }
 
 .profileBox .shotBox h2 {
@@ -115,25 +128,47 @@ section {
 .profileBox .followBox {
     width: 100%;
     display: grid;
-    grid-template-columns:auto auto auto ;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    grid-template-columns:20% 20% 20% ;
     justify-content: center;
-    margin-top: -40px;
+    padding-bottom: 15px;
+    margin-top: -20px;
 }
 
 .profileBox .followBox div {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0px 50px;
-    padding-bottom: 10px;
-    width: 100px;
     font-size: 0.8rem;
+}
+
+.profileBox .followBox div h4 {
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+}
+
+.profileBox .yourPost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .profileBox .yourPost .post {
     padding: 40px 20px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
     font-size: 0.9rem;
     display: flex;
+    line-height: 1.6rem;
+    width: 95%;
+    background: #fafafa;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.profileBox .yourPost .post:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
 }
 
 .profileBox .yourPost .post .shot {
@@ -147,6 +182,7 @@ section {
     border-radius: 50%;
 }
 
+
 .profileBox .yourPost .post .text h3 span {
     font-weight: 100;
     font-size: 0.7rem;
@@ -159,7 +195,207 @@ section {
 }
 
 .profileBox .yourPost .post .text img {
-    padding-top: 30px;
+    margin-top: 30px;
     width: 400px;
     object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 
+
+setting
+
+*/
+
+
+
+#profileBox2 {
+    padding: 30px;
+    position: relative;
+}
+
+#profileBox2  h2 {
+    padding-bottom: 20px;
+}
+
+#profileBox2 .set1 div {
+    width: 400px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-self: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#profileBox2 .set1 div input{
+   border-radius: 20px;
+   border: none;
+   outline: none;
+   padding: 4px 5px;
+   transition: 0.3s;
+   border: 1px solid rgba(0,0,0,0.3);
+}
+
+#profileBox2 .set1 div input:focus {
+    box-shadow:inset 0 0 5px rgba(0,0,0,0.2);
+}
+
+#profileBox2 .set2 div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    padding-bottom: 20px;
+}
+
+#profileBox2 div input[type="checkbox"] {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: #c6c6c6;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#profileBox2 div input:checked[type="checkbox"] {
+    background: #e0ad98;
+}
+
+#profileBox2 div input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: #fafafa;
+    transition: 0.5s;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+}
+
+#profileBox2 div input:checked[type="checkbox"]::before {
+    left: 30px;
+}
+
+#profileBox2 input[type="submit"] {
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 6px 15px;
+    position: relative;
+    top: 10px;
+    left: -4px;
+    transition: 0.3s;
+}
+
+#profileBox2 input:hover[type="submit"] {
+    background: #e0ad98;
+    color: #fafafa;
+}
+
+.menuBar {
+    /* background-color: white; */
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: max-content;
+}
+
+.menuBar div {
+    display: none;
+    position: relative;
+    background: #fafafa;
+    width: 20px;
+    height: 2px;
+    z-index: 2;
+}
+
+@media (max-width: 1000px) {
+    * {
+        font-size: 17px;
+    }
+
+    .menu ul li a {
+        font-size: 1rem;
+        padding: 15px 10px;
+    }
+
+    .profileBox .yourPost .post {
+        font-size: 0.9rem;
+        padding: 10px 3px;
+        width: 95%;
+    }
+
+    .profileBox .yourPost .post .text img {
+        width: 60%;
+    }
+
+    #profileBox2 {
+        padding: 30px 10px;
+    }
+
+    #profileBox2 .set1 div {
+        width: 80%;
+    }
+
+    #profileBox2 .set2 div {
+        width: 75%;
+    }
+}
+
+@media (max-width: 810px) {
+    * {
+        font-size: 14px;
+    }
+
+    .menu {
+        z-index: 1;
+        position: absolute;
+        left: 120px;
+        top:75px;
+        font-size: 0.8rem;
+        width: max-content;
+    }
+
+    .menuBar div {
+        display: block;
+    }
+
+    #profileBox2 .set1 div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #profileBox2 .set2 div {
+        width: 100%;
+    }
+
+    #profileBox2 .set2 div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px) {
+    section {
+        width: 93%;
+        margin: 10px;
+    }
+
+    .menu {
+        font-size: 0.6rem;
+    }
+
+    .profileBox .followBox {
+        grid-template-columns:30% 30% 30% ;
+    }
 }
