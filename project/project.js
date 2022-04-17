@@ -17,7 +17,15 @@ $(document).ready(function() {
                 '<p class="date">2022.4.10</p>' +
             '</a>' +
         '</div>'
-        );
+    );
     
+    $(".newPostBox").prepend(
+        '<div class="newPost">' + 
+            '<a href="../../Daily UI/Day6 User profile/Day6Index.html">' + 
+                '<h5>Daily UI Day 6 - User Profile and Daily UI Day 7 - setting</h5><img src="../../index/img/DailyUIDay6_7.png">' + 
+                '<p class="date">2022.4.17</p>' +
+            '</a>' +
+        '</div>'
+    );
 
 })

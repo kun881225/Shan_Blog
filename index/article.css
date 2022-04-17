@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
     color: #2c2c34;
+    font-size: 18px;
 }
 
 body {
@@ -20,19 +21,23 @@ body header {
     left: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 20px 30px;
     background: #fafafa;
     z-index: 10;
 }
 
-body header .logo {
-    font-size: 1.4rem;
+body header a {
     text-decoration: none;
+}
+
+body header a h2{
+    font-size: 2rem;
     color: #2c2c34;
 }
 
-body header .logo span {
+body header a span {
+    font-size: 2rem;
     color: #33707d;
 }
 
@@ -70,7 +75,7 @@ body header nav .navigation li a {
 }
 
 .indexBox .mainContentBox .mainContent .contentTitle {
-    font-size: 3rem;
+    font-size: 2.3rem;
 }
 
 
@@ -147,10 +152,15 @@ body header nav .navigation li a {
     color: #2c2c34;
 }
 
+.indexBox .secondaryContentBox .newPostBox .newPost a:hover h5{
+    color: #33707d;
+}
+
 .indexBox .secondaryContentBox .newPostBox .newPost h5{
     text-decoration: none;
     color: #2c2c34;
     font-size: 1rem;
+    transition: .3s;
 }
 .indexBox .secondaryContentBox .newPostBox .newPost img {
     width: 90%;
@@ -189,7 +199,11 @@ body header nav .navigation li a {
 
 @media(max-width:450px) {
     * {
-        font-size: 0.8rem;
+        font-size: 16px;
+    }
+
+    body header a h2 {
+        font-size: 1.5rem;
     }
 
     .indexBox .mainContentBox .mainContent .contentTitle {
