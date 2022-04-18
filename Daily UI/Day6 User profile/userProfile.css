@@ -209,7 +209,6 @@ setting
 */
 
 
-
 #profileBox2 {
     padding: 30px;
     position: relative;
@@ -324,6 +323,10 @@ setting
     * {
         font-size: 17px;
     }
+    
+    .profileBox .yourPost {
+        padding: 10px;
+    }
 
     .menu ul li a {
         font-size: 1rem;
@@ -341,7 +344,7 @@ setting
     }
 
     #profileBox2 {
-        padding: 30px 10px;
+        padding: 50px 20px;
     }
 
     #profileBox2 .set1 div {
@@ -361,8 +364,8 @@ setting
     .menu {
         z-index: 1;
         position: absolute;
-        left: 120px;
-        top:75px;
+        left: 15%;
+        top:85px;
         font-size: 0.8rem;
         width: max-content;
     }
@@ -388,11 +391,12 @@ setting
 @media (max-width: 620px) {
     section {
         width: 93%;
-        margin: 10px;
+        margin: 20px;
     }
 
     .menu {
         font-size: 0.6rem;
+        top:50px;
     }
 
     .profileBox .followBox {

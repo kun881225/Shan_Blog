@@ -2,13 +2,14 @@ let count = false;
 let info = ["First Name : ", "Last Nace : ", "Age : ", "Birth : "];
 $(document).ready(function(event) {
     
-    
+    checkSize();
 
     $(window).resize(checkSize);
-    
+
     toggleSetting();    
     toggleProfile();
     toggleMenu();
+
 })
 
 
@@ -32,6 +33,7 @@ function toggleSetting() {
 
             if (statusTxt = "success") {
 
+                checkSize();
                 toggleMenu();
                 $(".setting").addClass("active");
                 $(".user").removeClass("active");
@@ -62,6 +64,7 @@ function toggleProfile() {
     $(".user").click(function() {
         $(".profileBox").load("userProfile.html #profileBox1", function(resTxt, statusTxt) {
             if(statusTxt = "success") {
+                checkSize();
                 toggleMenu();
                 $(".setting").removeClass("active");
                 $(".user").addClass("active");
