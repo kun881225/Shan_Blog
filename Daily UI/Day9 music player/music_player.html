@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+
+  <link rel="stylesheet" href="music_player.css">
+</head>
+<body>
+    <div class="player">
+
+      <div class="inf_box">
+        <div class="track_img"></div>
+        <div class="track_name">Track name</div>
+        <div class="track_artist">Track Artist</div>
+      </div>
+
+      <div class="btn_box">
+        <div class="prev_track" onclick="prevTrack()"><ion-icon name="play-skip-back-outline"></ion-icon></div>
+        <div class="play" onclick="playPauseTrack()"><ion-icon name="play-circle-outline"></ion-icon></div>
+        <div class="next_track" onclick="nextTrack()"><ion-icon name="play-skip-forward-outline"></ion-icon></div>
+      </div>
+
+      <div class="slider_box1">
+        <div class="current_time">00:00</div>
+        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        <div class="total_duration">00:00</div>
+      </div>
+
+      <div class="slider_box2">
+        <ion-icon name="volume-low-outline"></ion-icon>
+        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+        <ion-icon name="volume-high-outline"></ion-icon>
+      </div>
+
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="music_player.js"></script>
+</body>
+</html>
