@@ -7,7 +7,7 @@ let next_btn = document.querySelector(".next_track");
 let prev_btn = document.querySelector(".prev_track");
 
 let seek_slider = document.querySelector(".seek_slider");
-let volume_slider = document.querySelector(".volumn_silder");
+let volume_slider = document.querySelector(".volume_slider");
 let curr_time = document.querySelector(".current_time");
 let total_duration = document.querySelector(".total_duration");
 
@@ -117,8 +117,8 @@ function seekTo() {
     playTrack();
 }
 
-function setVolumn() {
-    curr_track.volumn = volume_slider.value / 100;
+function setVolume() {
+    curr_track.volume = (volume_slider.value / 100);
 }
 
 function seekUpdate() {
