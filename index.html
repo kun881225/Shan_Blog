@@ -26,7 +26,7 @@
         <a href="index.html" class="logo"><h2>衫<span>.</span>Blog</h2></a>
         <nav>
             <ul class="navigation">
-                <li><a href="resume/resume1.html">履歷</a></li>
+                <!-- <li><a href="resume/resume1.html">履歷</a></li> -->
             </ul>
         </nav>
     </header>
@@ -43,6 +43,7 @@
                     <img src="index/img/DailyUIDay9.png">
                     <div>
                         <h3 class="contentTitle">Daily UI Day 9 - Music Player</h3>
+                        <div class="hashtag dailyUIHash">#Daily UI</div>
                         <p class="contentText">
                             這次的題目是做一個Musci Player，其實之前自己私底下做番茄鐘的時候有做過類似的，
                         但這次的功能更完整，心得之後有空再補吧，最近太忙了。
@@ -59,6 +60,7 @@
                     <img src="index/img/DailyUIDay6_7.png">
                     <div>
                         <h3 class="contentTitle">Daily UI Day 6 - User Profile and Daily UI Day 7 - setting</h3>
+                        <div class="hashtag dailyUIHash">#Daily UI</div>
                         <p class="contentText">
                             沒錯我直接跳過Daily UI Day 5，因為他要做一個APP icon，我覺得用網頁做APP icon沒什麼意思就跳過了，
                         然後我把Day 6和Day 7合在一起做了，可以點左邊的Profile和Setting做切換(但其他的都不能點)，主要是用到AJAX來做切換。
@@ -76,6 +78,7 @@
                     <img src="index/img/plotly1.png" style="background: #5596a4; padding: 8px;">
                     <div>
                         <h3 class="contentTitle">畫圖表? plotly.js!</h3>
+                        <div class="hashtag JSHash">#Javascript</div>
                         <p class="contentText">
                             前陣子在統計資料的時候需要各種圖表，我就在想有沒有可以快速畫出圖表的東西(除了excel，我不太會用)，結果就被我發現這個!
                         <br>
@@ -93,6 +96,7 @@
                     <img src="index/img/DailyUIDay4.png">
                     <div>
                         <h3 class="contentTitle">Daily UI Day 4 - calculator 和eval( )</h3>
+                        <div class="hashtag dailyUIHash">#Daily UI</div>
                         <p class="contentText">
                             這次的Daily UI 是做一個計算機，原本想做工程計算機的，但太花時間就算了(可能也做不出來)，
                         其實這種基本的計算機還挺好做的，主要是用JS的<span class="code">eval()</span>函式執行的，
@@ -112,6 +116,7 @@
                     <img src="index/img/chatRobot.jpg">
                     <div>
                         <h3 class="contentTitle">偽聊天機器人</h3>
+                        <div class="hashtag JSHash">#Javascript</div>
                         <p class="contentText">
                             今天Daily UI 的題目是做一個計算機，但我懶得用，因為最近在學JQuery，然後就想試著用JQuery做一個聊天機器人，
                             不過是假的哈哈，裡面的對話是我先打好了的，希望有一天能真的做出AI聊天機器人。
@@ -128,6 +133,7 @@
                     <img src="index/img/DailyUIDay3.png">
                     <div>
                         <h3 class="contentTitle">Daily UI Day 3 - Landing Page 以及 visibility</h3>
+                        <div class="hashtag dailyUIHash">#Daily UI</div>
                         <p class="contentText">
                             這禮拜(疑? 的題目是做一個Landing Page，就是一種只有一頁的網頁，然後我就突發奇想想試試看背景是gif的效果會怎麼樣，
                             剛做完的時候覺得蠻酷的哈哈，不過看久了反而覺得有點太複雜了，也有可能是因為gif的圖示網路上隨便找的資源，不是為產品網頁量身打造的。
@@ -145,6 +151,7 @@
                     <img src="index/img/DailyUIDay2.png">
                     <div>
                         <h3 class="contentTitle">Daily UI Day 2 - Checkout Page</h3>
+                        <div class="hashtag dailyUIHash">#Daily UI</div>
                         <p class="contentText">
                             Daily UI 快變成 Weekly UI 了，但最近太忙了，有一些想做的計畫，之後有空再說哈哈。
                         </br>
@@ -164,6 +171,7 @@
                     <img src="index/img/DailyUIDay1.png">
                     <div>
                         <h3 class="contentTitle">Daily UI Day 1 - Sign Up</h3>
+                        <div class="hashtag dailyUIHash">#Daily UI</div>
                         <p class="contentText">今天看到一個很有趣的挑戰叫做Daily UI，只要給他email，他就會每天傳送一個UI的題目給你，總共會持續一百天，像第一天的題目為 Sign Up，
                         要求你做一個簡單的登入頁面，雖然這是UI設計，但我覺得拿來做網頁排版也是一個不錯的練習。</p>
                         <p class="date">2022.2.26</p>
@@ -181,9 +189,19 @@
     <!-- aside -->
 
         <aside class="secondaryContentBox">
-            <h4>最新文章</h4>
-            <div class="newPostBox">
-  
+            
+            <h4>文章分類</h4>
+            <div class="sortBox">
+                <a href="index/sort_dialy_UI.html" class="sortText">
+                    <div class="sortArrow"></div>Daily UI
+                    <div class="postNum" id="dailyNum"></div>
+                </a>
+
+                <a href="index/sort_javascript.html" class="sortText">
+                    <div class="sortArrow"></div>Javascript
+                    <div class="postNum" id="JSNum"></div>
+                </a>
+                
             </div>
 
             <h4>推薦文章</h4>
@@ -197,6 +215,11 @@
                 </div>   
   
             </div>
+
+            <!-- <h4>最新文章</h4>
+            <div class="newPostBox">
+  
+            </div> -->
         </aside>
 
         <script src="jquery-3.6.0.min.js"></script>
