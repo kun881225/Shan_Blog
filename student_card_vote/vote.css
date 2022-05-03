@@ -1,0 +1,346 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+    color: #2c2c34;
+    font-size: 0.9rem;
+}
+
+body {
+    width: 100%;
+    min-height: 150vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    background: white
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 40px;
+    position: fixed;
+    top: 0px;
+    background: white;
+    z-index: 100;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.2),
+    0 2px 15px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .menu {
+    display: flex;
+    gap: 10px;
+}
+
+header .menu li {
+    list-style: none;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(0,0,0,0.75)
+}
+
+header .menu li img {
+    width: 20px;
+}
+
+header .logo img:nth-child(1){
+    width: 80px;
+}
+
+header .logo img:nth-child(2){
+    width: 100px;
+    height:25px;
+}
+
+section {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+section h1 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    background: #58878c;
+    color: white;
+    border-radius: 30px;
+    padding: 5px 30px 10px;
+    box-shadow: 1px 1px 3px #58878c6b;
+}
+
+section .box {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 30px;
+    row-gap: 50px;
+    margin: 20px;
+}
+
+section .box .detail_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #58878c7c;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+    color: black;
+    background: white;
+    box-shadow: 1px 1px 5px #58878c1b;
+}
+
+section .box .detail_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 10px #58878c3c;
+    animation: float 1s ease-in-out infinite alternate
+
+}
+
+section .box .detail_box .card {
+    position: relative;
+    width: 368px;
+    height: 240px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+section .box.straight .detail_box {
+    padding: 10px 94px;
+}
+
+section .box.straight .detail_box .card {
+    width: 240px;
+    height: 368px;
+}
+
+section .box .detail_box .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    transform: perspective(500px) rotateY(0deg);
+    transition: transform 0.4s ease-out ;
+}
+
+
+section .box .detail_box .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    transform: perspective(500px) rotateY(180deg);
+    transition: transform 0.4s ease-out ;
+}
+
+section .box .detail_box .card:hover .front {
+    transform: perspective(500px) rotateY(180deg);
+}
+section .box .detail_box .card:hover .back {
+    transform: perspective(500px) rotateY(360deg);
+}
+
+
+section .box .detail_box .name {
+    padding-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+
+/* section .box .detail_box .arrow {
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border-bottom: 3px solid #2c2c34;
+    border-left: 3px solid #2c2c34;
+    transform: rotate(-45deg);
+    border-radius: 2px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+section .box .detail_box:hover .arrow {
+    
+    animation: float 1s ease-in-out infinite alternate ;
+} */
+
+@keyframes float {
+    0% {transform: translateY(-3px);}
+    100% {transform: translateY(3px);}
+}
+
+section .box .detail_box label {
+    margin: 10px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size:1.1rem
+}
+
+section .box .detail_box .idea {
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+section .box .detail_box:hover .idea {
+    color: #58878c;
+}
+
+section .submit {
+    font-size: 1.3rem;
+    padding: 7px 20px;
+    background: #668a8e;
+    border: none;
+    color: white;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    margin: 30px 0px;
+    transition: 0.3s;
+}
+section .submit:hover {
+    background: #58878c;
+}
+
+
+
+
+
+/* 跳出理念 */
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    transition: opacity 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    padding-top: 120px;
+    display: grid;
+    place-content: center;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay .popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    padding: 20px 60px;
+    background: #f7f7f7;
+    border-radius: 20px;
+}
+
+.overlay .popup .name {
+    padding-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.overlay .popup .img img {
+    width: 368px;
+    height: 240px;
+    margin: 20px 0;
+}
+.overlay.straight .popup .img img{
+    width: 240px;
+    height: 368px;
+}
+.overlay .popup .img {
+    display: flex;
+    gap: 20px;
+}
+
+
+.overlay .popup .idea {
+    letter-spacing: 1.5px;
+}
+
+.overlay .popup .close {
+    text-decoration: none;
+    color: #f7f7f7;
+    background: #58878c;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.overlay.straight .popup .close {
+    margin-top: 5px;
+}
+
+
+.overlay .popup .close:hover {
+    background: #668a8e;
+}
+
+@media (max-width:900px) {
+    section .box {
+        grid-template-columns: auto auto ;
+    }
+    section .box .detail_box .card {
+        position: relative;
+        width: 184px;
+        height: 120px;
+        margin: 20px 0;
+        border-radius: 5px;
+    }
+
+    section .box.straight .detail_box .card {
+        width: 120px;
+        height: 184px;
+    }
+    section .box.straight .detail_box {
+        padding: 10px 61px;
+    }
+}
+
+@media (max-width:500px) {
+    section .box {
+        grid-template-columns: auto;
+    }
+    section .box .detail_box .card {
+        position: relative;
+        width: 184px;
+        height: 120px;
+        margin: 20px 0;
+        border-radius: 5px;
+    }
+
+    section .box.straight .detail_box .card {
+        width: 120px;
+        height: 184px;
+    }
+    section .box.straight .detail_box {
+        padding: 10px 61px;
+    }
+}
