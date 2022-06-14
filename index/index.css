@@ -60,6 +60,43 @@ body header nav .navigation li a:hover {
    
 }
 
+
+
+.resumeBox {
+    width: 70%;
+    height: fit-content;
+    position: relative;
+    margin-top: 5vh;
+    margin-bottom: 80vh;
+    perspective: 20000px
+}
+
+.resumeBox #resume1 {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    transform:  rotateY(0deg);
+    transition: transform 0.7s linear ;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 1px #4a6e7780;
+}
+.resumeBox:hover #resume1 {
+    transform:  rotateY(180deg);
+}
+.resumeBox #resume2 {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    transform:  rotateY(180deg);
+    transition: transform 0.7s linear;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 1px #4a6e7780;
+}
+.resumeBox:hover #resume2 {
+    transform:  rotateY(360deg);
+}
+
+
 .indexBox {
     width: 92%;
     min-height: 100%;
@@ -67,8 +104,7 @@ body header nav .navigation li a:hover {
     background: #fafafa;
     margin: 40px 0px;
     border-radius: 30px;
-    display: flex;
-    
+    display: flex;   
 }
 
 .indexBox .mainContentBox {
