@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杉.blog | DailyUI Day 3 - Landing Page 以及 visibility</title>
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../index/article.css">
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo"><h2>衫<span>.</span>Blog</h2></a>
+        <nav>
+            <ul class="navigation">
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="indexBox">
+        <article class="mainContentBox">
+            <div class="mainContent">
+                    <p class="date">2022.3.12</p>
+                    <h3 class="contentTitle">Daily UI Day 3 - Landing Page 以及 visibility</h3>
+                    <a href="day3LandingPage.html" target="_blank"><img src="../../index/img/DailyUIDay3.png" class="titleImg"></a>
+                    <p class="contentText">
+                        他的背景是會動的喔!
+                        </br>
+                        </br>
+                            這禮拜(疑? 的題目是做一個Landing Page，就是一種只有一頁的網頁，我就突發奇想試試看背景是gif的效果會怎麼樣，
+                            剛做完的時候覺得蠻酷的哈哈，不過看久了反而覺得有點太複雜了，也有可能是因為gif的圖示網路上隨便找的資源，不是為產品網頁量身打造的。
+                        </br>
+                        </br>
+                            不過這次讓我最滿意的地方是做成RWD，就是當螢幕比較小時候，上面的目錄會變成展開式的，就像下面的效果。
+                        </br>   
+                        </br> 
+                            <div id="img1">
+                                <img src="img/1.png">
+                                <img src="img/2.png">
+                            </div>
+                     </p>
+                     <p class="contentText">       
+                        </br>
+                            要做到這種效果可以用CSS裡的<span class="code">display:none</span>來實現，但用這個屬性有個缺點，
+                            會無法做出有<span class="code">transition</span>屬性的動畫，比如說
+                        <code>.menu {
+                            display: none;
+                            transition: 0.5s;
+                            opacity: 0;
+                        }
+                        
+                        .menu.active {
+                            display: block;
+                            transition:0.5s;
+                            opacity: 1;
+                        }    
+                        </code>
+                        儘管加上了<span class="code">transition</span>和<span class="code">opacity</span>
+                        ，他仍然沒有過渡的效果，因為<span class="code">display:none</span>時，
+                        該元素是不存在的，所以<span class="code">transition</span>是沒效果的。
+                        <br>
+                        <br>
+                        這個時候!<br>就要用到今天想介紹的<span class="code">visibility</span>屬性了，
+                        他能夠顯示或隱藏元素並且不更改文件的位置和布局，也不會點擊到他，於是我們可以改寫成這樣
+                        <code>.menu {
+                            visibility: hidden;
+                            transition: 0.5s;
+                            opacity: 0;
+                        }
+                        
+                        .menu.active {
+                            visibility: visible;
+                            transition:0.5s;
+                            opacity: 1;
+                        }    
+                        </code>
+                        就可以有過渡的效果了!
+                    </p>
+
+
+            </div>
+        </article>
+
+
+        <aside class="secondaryContentBox">
+            <h4>最新文章</h4>
+            <div class="newPostBox">
+
+            </div>
+
+            <h4>推薦文章</h4>
+            <div class="recommendBox">
+
+            </div>
+        </aside>
+        </aside>
+    </div>
+
+
+    <style>
+        #img1 {
+            display: flex;
+            gap: 15px;
+        }
+
+        #img1 img{
+            width: 25%;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+           
+        }
+    </style>
+
+    <script src="../../jquery-3.6.0.min.js"></script>
+    <script src="../DailyUI.js"></script>
+</body>
+</html>

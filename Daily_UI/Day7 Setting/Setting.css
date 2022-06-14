@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #cbd4ca, #2c7088);
+}
+
+section {
+    width: 80%;
+    min-height: 80vh;
+    background: #ebede6;
+    border-radius: 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+.container {
+    width: 30%;
+    min-height: 100%;
+    background: white;
+}
+
+.container div {
+    color: #2c7088;
+    font-size: 0.9rem;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container div h3 {
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.container div:hover h3 {
+    color: #fff;
+}
+
+.container div span {
+    margin-right: 10px;
+    padding: 10px;
+    background: #2c7088;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    position: relative;
+    color: #ebede6;
+    transition: 0.5s;
+    display: grid;
+    place-content: center;
+}
+
+.container div span::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background: white;
+    border-radius: 50%;
+    left: 20%;
+    top: 20%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.container div:hover span::before {
+    transform: scale(1);
+}
+
+.container div span ion-icon {
+    font-weight: bolder;
+    transition: 0.5s;
+}
+
+.container div:hover ion-icon {
+    color: #2c7088;
+}
+
+.container div::before {
+    content: '';
+    position: absolute;
+    background: #2c7088;
+    width: 35px;
+    min-height: 35px;
+    border-radius: 20px;
+    transition: width 0.5s;
+    opacity: 0;
+}
+
+.container div:hover::before {
+    content: '';
+    position: absolute;
+    background: #2c7088;
+    width: 85%;
+    min-height: 50%;
+    opacity: 1;
+}
+
+@media (max-width:850px) {
+    .container {
+        width: 100%;
+       
+    }
+}

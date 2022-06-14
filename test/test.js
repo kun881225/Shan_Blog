@@ -1,15 +1,25 @@
-$(document).ready(function() {
 
-    var box1 = $("#box1").get(0);
 
-    $("#btn1").click(function(){
-        alert(box1);
+window.onload = () => {
+    let con = document.querySelector(".container");
+
+    // con.addEventListener("mousemove",(e) => {
+    //     let x = e.clientX;
+    //     let y = e.clientY;
+    
+    //     console.log(x);
+    //     console.log(y);
+    
+    // })
+
+    
+    document.body.addEventListener("mousemove",(e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+    
+        console.log(x);
+        console.log(y);
+    
     })
 
-
-
-
-
-
-
-})
+}

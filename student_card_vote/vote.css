@@ -256,18 +256,12 @@ section .submit:hover {
     padding: 20px 60px;
     background: #f7f7f7;
     border-radius: 20px;
-    overflow-y: auto;
-    overflow-x: auto;
 }
 
 .overlay .popup .name {
     padding-bottom: 10px;
     font-size: 1.4rem;
     font-weight: 600;
-}
-.overlay .popup .img {
-    display: flex;
-    gap: 20px;
 }
 
 .overlay .popup .img img {
@@ -279,7 +273,10 @@ section .submit:hover {
     width: 240px;
     height: 368px;
 }
-
+.overlay .popup .img {
+    display: flex;
+    gap: 20px;
+}
 
 
 .overlay .popup .idea {
@@ -325,19 +322,6 @@ section .submit:hover {
     section .box.straight .detail_box {
         padding: 10px 61px;
     }
-    .overlay .popup {
-        width: 700px;
-        font-size: 0.8rem;
-        margin-bottom: 20px;
-    }
-    .overlay .popup .img {
-        flex-direction: column;
-    }
-    .overlay .popup .img img {
-        width: 184px;
-        height: 120px;
-        margin: 20px 0;
-    }
 }
 
 @media (max-width:500px) {
@@ -358,10 +342,5 @@ section .submit:hover {
     }
     section .box.straight .detail_box {
         padding: 10px 61px;
-    }
-    .overlay .popup {
-        width: 350px;
-        font-size: 0.8rem;
-        margin-bottom: 20px;
     }
 }

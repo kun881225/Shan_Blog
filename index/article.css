@@ -98,7 +98,7 @@ body header nav .navigation li a {
 
 .indexBox .mainContentBox .mainContent .contentText .important {
     font-weight: bold;
-    background: #ffff06d3;
+    color:#3d8292;
 }
 
 .indexBox .mainContentBox .mainContent .contentText .code {

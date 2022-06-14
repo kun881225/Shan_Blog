@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <form class="calculator">
+        <input class="value" type="text" readonly="">
+        <input class="answer" type="text" readonly="">
+        <div class="digitBox">
+            <span class="num clear" onclick="clearAll()">c</span>
+            <span class="num operator" onclick="cal('%')">%</span>
+            <span class="num operator" onclick="cal('/')">/</span>
+            <span class="num" onclick="cal('7')">7</span>
+            <span class="num" onclick="cal('8')">8</span>
+            <span class="num" onclick="cal('9')">9</span>
+            <span class="num operator" onclick="cal('*')">*</span>
+            <span class="num" onclick="cal('4')">4</span>
+            <span class="num" onclick="cal('5')">5</span>
+            <span class="num" onclick="cal('6')">6</span>
+            <span class="num operator" onclick="cal('-')">-</span>
+            <span class="num" onclick="cal('1')">1</span>
+            <span class="num" onclick="cal('2')">2</span>
+            <span class="num" onclick="cal('3')">3</span>
+            <span class="num operator" onclick="cal('+')">+</span>
+            <span class="num" onclick="cal('0')">0</span>
+            <span class="num" onclick="cal('00')">00</span>
+            <span class="num" onclick="cal('.')">.</span>
+            <span class="num operator" onclick="cal('euql')">=</span>
+        </div>
+    </form>
+
+    <div class="background">
+        <div class="color1"></div>
+        <div class="color2"></div>
+    </div>
+
+    <script src="../../jquery-3.6.0.min.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>

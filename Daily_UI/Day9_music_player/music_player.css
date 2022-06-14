@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #504999;
+    color: #f1eeee;
+    display: grid;
+    place-content: center;
+    align-items: center;
+}
+
+.player {
+    width: 350px;
+    height: 80vh;
+    display: grid;
+    place-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background-color: #2d267a23;
+    border-radius: 20px;
+}
+
+.inf_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.track_img {
+    height: 250px;
+    width: 250px;
+    background-image: url(StockSnap_BLB9166VZ0.jpg);
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+}
+
+.track_img::after {
+    content:'';
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    background: #988ff8;
+    opacity: 0.1;
+    border-radius: 20px;
+}
+
+.track_name {
+    font-size: 2.7rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.track_artist {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.8px;
+}
+
+.btn_box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.play {
+    font-size: 3rem;
+}
+
+.prev_track, .play, .next_track {
+    transition: 0.2s;
+}
+
+.prev_track:hover, .play:hover, .next_track:hover {
+    color: #8577d8;
+}
+.slider_box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    width: 300px;
+}
+
+.slider_box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #8e82d7;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+.seek_slider {
+    width: 70%;
+    margin: 0px 15px;
+   
+}
+
+.volume_slider {
+    width: 35%;
+    margin: 0px 15px;
+}
+
+
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+

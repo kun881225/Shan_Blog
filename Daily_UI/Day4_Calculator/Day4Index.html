@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杉.blog | DailyUI Day 4 - calculator</title>
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../index/article.css">
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="logo"><h2>衫<span>.</span>Blog</h2></a>
+        <nav>
+            <ul class="navigation">
+            
+            </ul>
+        </nav>
+    </header>
+
+    <div class="indexBox">
+        <article class="mainContentBox">
+            <div class="mainContent">
+                    <p class="date">2022.4.3</p>
+                    <h3 class="contentTitle">Daily UI Day 4 - calculator 和 eval( )</h3>
+                    <a href="calculator.html" target="_blank"><img src="../../index/img/DailyUIDay4.png" class="titleImg"></a>
+                    <p class="contentText">
+                        這次的Daily UI 是做一個計算機，原本想做工程計算機的，但太花時間就算了(可能也做不出來)，
+                        其實這種基本的計算機還挺好做的，主要是用JS的<span class="code">eval()</span>函式執行的，
+                        <br>
+                        <br>
+                        <span class="code">eval( )</span>是evaluates的簡寫，它的功能很猛，會將傳入的string直接當作JS的代碼執行，
+                        舉個例子：
+                        <code>
+                            let input = "1 + 1";
+                            console.log(input); &nbsp &nbsp &nbsp // "1 + 1"
+                        </code>
+                        若此時加上<span class="code">eval( )</span>則會:
+                        <code>
+                            output = eval(input);
+                            console.log(output); &nbsp &nbsp &nbsp // 2
+                        </code>
+                        會發現他自動把字串1+1算出來了!
+                        <br>
+                        用這種方法就可以輕易做出加減乘除的效果了，有機會再來做做看三角函數或log之類的東西好了。
+                        <br>
+                        <br>
+                        話說我一直很喜歡後面那種毛玻璃背景，感覺放在任何地方都很好看，其實做法也超簡單，之後有空再說吧哈哈
+                    </p>
+
+
+            </div>
+        </article>
+
+
+        <aside class="secondaryContentBox">
+            <h4>最新文章</h4>
+            <div class="newPostBox">
+
+            </div>
+
+            <h4>推薦文章</h4>
+            <div class="recommendBox">
+
+            </div>
+        </aside>
+        </aside>
+    </div>
+
+
+   <script src="../../jquery-3.6.0.min.js"></script>
+   <script src="../DailyUI.js"></script>
+</body>
+</html>

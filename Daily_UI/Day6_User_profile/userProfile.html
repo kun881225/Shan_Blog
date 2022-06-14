@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+
+    <link rel="stylesheet" href="userProfile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="#"><ion-icon name="compass-outline"></ion-icon>New</a>
+                </li>
+                <li>
+                    <a href="#"><ion-icon name="flame-outline"></ion-icon>Hot</a>
+                </li>
+                <li>
+                    <a href="#"><ion-icon name="bookmark-outline"></ion-icon>Favorite</a>
+                </li>
+                <li>
+                    <a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a>
+                </li>
+                <li>
+                    <a href="#"><ion-icon name="chatbubble-outline"></ion-icon>Message</a>
+                </li>
+                <li>
+                    <a href="#" class="user active"><ion-icon name="person-outline"></ion-icon>Profile</a>
+                </li>
+                <li>
+                    <a href="#"  class="setting" ><ion-icon name="settings-outline"></ion-icon>Setting</a>
+                </li>
+            </ul>
+        </nav>       
+        <div class="profileBox" id="profileBox1">
+           <div class="menuBar">
+               <div></div>
+               <div></div>
+               <div></div>
+           </div>
+            <div class="backgroundImgBox">
+                <img src="sea-g216e3937a_1920.jpg">
+            </div>
+            <div class="shotBox"> 
+                
+                <div class="shot"><img src="291667.jpg"></div>
+                <h2>Yang Shan</h2>
+            </div>
+    
+            <div class="followBox">
+                <div class="fans">
+                    <h4>Fnas</h4>
+                    <p>5968</p>
+                </div>
+                <div class="post">
+                    <h4>Post</h4>
+                    <p>13</p>
+                </div>
+                <div class="follower">
+                    <h4>Follower</h4>
+                    <p>268</p>
+                </div>
+            </div>
+
+            <div class="yourPost">
+                <div class="post">
+                    <div class="shot">
+                        <img src="291667.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>畫圖表? plotly.js!<span>2022.4.10</span></h3>
+                        <p>前陣子在統計資料的時候需要各種圖表，我就在想有沒有可以快速畫出圖表的東西(除了excel，我不太會用)，結果就被我發現這個!...</p>
+                        <img src="../../index/img/plotly1.png">
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="shot">
+                        <img src="291667.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>Daily UI Day 4 - calculator <span>2022.4.3</span></h3>
+                        <p>這次的Daily UI 是做一個計算機，原本想做工程計算機的，但太花時間就算了(可能也做不出來)，
+                            其實這種基本的計算機還挺好做的，主要是用JS的<span class="code">eval()</span>函式執行的，</p>
+                        <img src="../../index/img/DailyUIDay4.png">
+                        
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="shot">
+                        <img src="291667.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>偽聊天機器人<span>2022.3.1</span></h3>
+                        <p>今天Daily UI 的題目是做一個計算機，但我懶得用，因為最近在學JQuery，然後就想試著用JQuery做一個聊天機器人，
+                            不過是假的哈哈，裡面的對話是我先打好了的，希望有一天能真的做出AI聊天機器人。</p>
+                            <img src="../../index/img/chatRobot.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../../jquery-3.6.0.min.js"></script>
+
+
+    <script src="userProfile.js"></script>
+
+</body>
+</html>
