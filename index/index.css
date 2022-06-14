@@ -5,6 +5,10 @@
     
     color: #2c2c34;
 }
+@keyframes float {
+    0%,100% {transform:translateY(0px)}
+    50% {transform: translateY(15px);}
+}
 
 body {
     width: 100%;
@@ -69,6 +73,10 @@ body header nav .navigation li a:hover {
     perspective: 20000px
 }
 
+.resumeBox:hover {
+    animation: float 3s linear infinite alternate ;
+}
+
 .resumeBox #resume1 {
     position: absolute;
     width: 100%;
@@ -78,7 +86,7 @@ body header nav .navigation li a:hover {
     border-radius: 10px;
     box-shadow: 0 0 50px 1px #4a6e7780;
 }
-.resumeBox:hover #resume1 {
+.resumeBox.active #resume1 {
     transform:  rotateY(180deg);
 }
 .resumeBox #resume2 {
@@ -90,7 +98,7 @@ body header nav .navigation li a:hover {
     border-radius: 10px;
     box-shadow: 0 0 50px 1px #4a6e7780;
 }
-.resumeBox:hover #resume2 {
+.resumeBox.active #resume2 {
     transform:  rotateY(360deg);
 }
 

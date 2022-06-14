@@ -21,6 +21,18 @@ $(document).ready(function() {
 
 })
 
+//
+//  resume box
+//
+
+$(document).ready(function() {
+    let resumeBox = $(".resumeBox");
+    resumeBox.click(() => {
+        resumeBox.toggleClass("active");
+    })
+   
+
+})
 
 //
 //      index post
