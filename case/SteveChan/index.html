@@ -5,7 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Sans+TC:wght@100;300;400;500;700&family=Nunito:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
 
     <title>Steve Chan</title>
 </head>
@@ -13,13 +20,15 @@
 
 <!-- Header -->
 
-    <header id="header">
-        <h1 class="logo">Steve Chan</h1>
-        <ul>
-            <li><a href="#">music</a></li>
-            <li><a href="#">media</a></li>
-        </ul>
-    </header>
+<script src="./js/header.js"></script> 
+
+<!-- <header id="header">
+    <h1 class="logo">Steve Chan</h1>
+    <ul>
+        <li><a href="#">music</a></li>
+        <li><a href="#">media</a></li>
+    </ul>
+</header> -->
 
 <!-- banner -->
 
@@ -79,17 +88,23 @@
                 </ul>
             </div>
         </div>
+
+<!-- more -->
         
         <div class="moreBox">
-            <a href="#" class="left">
+            <a href="music.html" class="left" target="_blank">
                 <h3 class="title">Music</h3>
             </a>
-            <a href="#" class="right">
+            <a href="media.html" class="right" target="_blank">
                 <h3 class="title">Media</h3>
             </a>
         </div>
 
     </main>
+
+
+<!-- contact  -->
+
 
     <section class="contactBox">
         <h3 class="title">Contact Me</h3>
@@ -100,15 +115,35 @@
         </div>
     </section>
 
-    <footer>
-        <p>copyright <span>&copy</span> 2022 Steve Chan</p>
-    </footer>
+
+<!-- footer -->
+
+    <script src="./js/footer.js"></script>
 
 
-    <script src="index.js"></script>
+<!-- float contact -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Sans+TC:wght@100;300;400;500;700&family=Nunito:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="./js/float_contact.js"></script>
+
+    <!-- <div class="float_contact">
+        <a href="https://www.instagram.com/cfp_salmonsushi/" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100000351012129" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+    </div> -->
+
+
+
+<!-- JS -->
+    
+    <script src="./js/index.js"></script>
+
+<!-- ionicon -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

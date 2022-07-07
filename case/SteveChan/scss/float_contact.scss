@@ -1,0 +1,36 @@
+body {
+    .float_contact {
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & > a {
+            padding: 10x;
+            display: grid;
+            place-content: center;
+            
+            & > ion-icon {
+                font-size: 40px;
+                transition: 0.5s;
+            }
+        
+
+            &:hover > ion-icon {
+                color: var(--text_hover_color)
+            }
+        
+        }    
+    }
+
+   
+}
+
+@media(max-width:500px) {
+
+    .float_contact {
+        display: none !important;
+    }
+}

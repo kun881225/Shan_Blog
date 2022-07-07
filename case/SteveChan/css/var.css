@@ -1,0 +1,7 @@
+:root {
+    --background_color: inear-gradient(to bottom, #201f1f, #362d04);
+    --text-background-color: #2a2929;
+    --text_color: #f7f7f7;
+    --text_second_color: #fed54e;
+    --text_hover_color: #d5b340; 
+}
