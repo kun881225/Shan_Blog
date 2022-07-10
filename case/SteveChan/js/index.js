@@ -2,25 +2,38 @@
 
 $(document).ready(function() {
 
-   let y;
-   let contentFadeIn = [140, 280, 500, 1160];
+    let y;
+    let contentBoxes = document.querySelectorAll('.contentBox .content .box');
+    let contentBoxY= [];
 
-   $(window).on('scroll', function() {
-        y = scrollY;
-        console.log(y);
+    $(contentBoxes).each((index, value) => {
+        contentBoxY.push(value.offsetTop);
+    })
 
-        $('header').toggleClass('black', y > 110);
+    // console.log(contentBoxY);
+    
+    let contact_contact = document.querySelectorAll('.contactBox .contact');
+    let contact_title = document.querySelectorAll('.contactBox .title');
 
-        let contentBoxes = document.querySelectorAll('.contentBox .content .box');
-        for(let i = 0; i < contentBoxes.length; i++) {
-            $(contentBoxes[i]).toggleClass('fade_in', y > contentFadeIn[i]);
-        }
+    
 
-        $('.contactBox .contact').toggleClass('fade_in', y > 2160);
-        $('.contactBox .title').toggleClass('fade_in', y > 2160);
+    
 
 
-   })
+    $(window).on('scroll', function() {
+            y = scrollY + window.innerHeight;
+
+            $('header').toggleClass('black', y > 110);
+        
+            for(let i = 0; i < contentBoxes.length; i++) {
+                $(contentBoxes[i]).toggleClass('fade_in', y > contentBoxY[i]);
+            }
+
+            $(contact_contact).toggleClass('fade_in', y > $(contact_contact).offset().top - 100);
+            $(contact_title).toggleClass('fade_in', y > $(contact_contact).offset().top - 100);
+
+
+    })
 
     
 })

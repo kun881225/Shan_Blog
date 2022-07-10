@@ -1,9 +1,8 @@
-@import url(normalize.css);
 @import url(reset.css);
 @import url(var.css);
 @import url(header.css);
 @import url(float_contact.css);
-@import url(rwd.css);
+@import url(scroll_bar.css);
 
 @keyframes fade_in {
     0% {
@@ -18,7 +17,6 @@
 
 * {
     box-sizing: border-box;
-    font-size: 22px;
 }
 
 
@@ -43,6 +41,7 @@ body {
     font-family: 'Nunito', 'Noto Sans TC', sans-serif;
     font-family: 'Cormorant Garamond','Noto Sans TC', serif;
     background: linear-gradient(to bottom, #201f1f, #362d04);
+    font-size: 22px;
     
 }
 
@@ -172,7 +171,7 @@ body .content .box .primary_title {
 }
 
 .contentBox .moreBox {
-    width: 85%;
+    min-width: 85%;
     min-height: 55vh;
     display: flex;
     justify-content: space-around;
@@ -286,8 +285,12 @@ footer p {
     font-size: 0.85rem;
 }
 
+/* phone */
 
 @media (max-width:500px) {
+    .banner::after {
+        background-position-x: 45%;
+    }
     .banner .idea {
         font-size: 1.8rem;
     }
@@ -304,6 +307,16 @@ footer p {
     .content .box .text .tag{
         font-size: 1.1rem;
     }
+    .contentBox .moreBox {
+        min-height: 35vh;
+    }
+    .contentBox .moreBox .left {
+        background-position: 75% 45%;
+    }
+    .contentBox .moreBox .left .title,
+    .contentBox .moreBox .right .title {
+         font-size: 1.3rem;
+    } 
     .contactBox {
         min-height: 40vh;
     }
@@ -314,3 +327,11 @@ footer p {
         font-size: 0.8rem;
     }
 }
+
+/* pad */
+
+@media (max-width:900px) {
+    .banner::after {
+        background-position-x: 45%;
+    }
+} 

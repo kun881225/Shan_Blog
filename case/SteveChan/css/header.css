@@ -20,18 +20,18 @@ header .logo {
   letter-spacing: 1.5px;
   font-family: "Cormorant Garamond", serif;
 }
-header ul {
+header .menu {
   display: flex;
   gap: 30px;
 }
-header ul li a {
+header .menu li a {
   letter-spacing: 1px;
   font-size: 1.4rem;
   font-weight: 500;
   transition: 0.3s;
   position: relative;
 }
-header ul li a::after {
+header .menu li a::after {
   position: absolute;
   content: "";
   top: 90%;
@@ -42,12 +42,18 @@ header ul li a::after {
   border-radius: 10px;
   transition: 0.3s;
 }
-header ul li a:hover::after {
+header .menu li a:hover::after {
   width: 100%;
 }
 
 @media (max-width: 500px) {
-  #header {
-    display: none;
+  #header .logo {
+    font-size: 1.2rem;
+  }
+  #header .menu {
+    gap: 14px;
+  }
+  #header .menu li a {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=header.css.map */

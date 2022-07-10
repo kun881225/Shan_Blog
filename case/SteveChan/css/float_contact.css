@@ -1,13 +1,15 @@
 body .float_contact {
   position: fixed;
-  bottom: 40px;
-  right: 30px;
+  bottom: 35px;
+  right: 25px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 body .float_contact > a {
-  padding: 10x;
+  background-color: var(--text-background-color-opacity);
+  border-radius: 50%;
+  padding: 13px;
   display: grid;
   place-content: center;
 }
@@ -21,6 +23,10 @@ body .float_contact > a:hover > ion-icon {
 
 @media (max-width: 500px) {
   .float_contact {
-    display: none !important;
+    bottom: 10px;
+    right: 8px;
+  }
+  .float_contact > a > ion-icon {
+    font-size: 22px !important;
   }
 }/*# sourceMappingURL=float_contact.css.map */
